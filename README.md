@@ -39,7 +39,7 @@
 		<tr>
 			<td>merchantName</td>
 			<td>String</td>
-			<td></td>
+			<td>Yes</td>
 			<td></td>
 		</tr>
 		<tr>

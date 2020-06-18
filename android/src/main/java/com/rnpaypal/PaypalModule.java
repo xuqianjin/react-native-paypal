@@ -76,7 +76,10 @@ public class PaypalModule extends ReactContextBaseJavaModule implements Activity
 		final String clientId = params.getString("clientId");
 		final String merchantName = params.getString("merchantName");
 
-		config = new PayPalConfiguration().environment(environment).clientId(clientId).merchantName(merchantName);
+		config = new PayPalConfiguration().environment(environment).clientId(clientId);
+		
+		if(params.hasKey("merchantName"))
+			config.merchantName(params.getString("merchantName"));
 
 		if(params.hasKey("acceptCreditCards"))
 			config.acceptCreditCards(params.getBoolean("acceptCreditCards"));
